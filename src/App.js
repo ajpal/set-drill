@@ -9,10 +9,10 @@ const NUM_ROWS = 9;
 const NUM_COLS = 9;
 
 function App() {
-  const [row1, setRow1] = useState(0);
-  const [col1, setCol1] = useState(0);
-  const [row2, setRow2] = useState(0);
-  const [col2, setCol2] = useState(0);
+  const [row1, setRow1] = useState(getRandomInt(0, NUM_ROWS));
+  const [col1, setCol1] = useState(getRandomInt(0, NUM_COLS));
+  const [row2, setRow2] = useState(getRandomInt(0, NUM_ROWS));
+  const [col2, setCol2] = useState(getRandomInt(0, NUM_COLS));
 
   const [start, setStart] = useState(Date.now());
   const [total, setTotal] = useState(0);
