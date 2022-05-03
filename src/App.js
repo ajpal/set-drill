@@ -14,17 +14,35 @@ function App() {
   const [row2, setRow2] = useState(0);
   const [col2, setCol2] = useState(0);
 
+  const [start, setStart] = useState(Date.now());
+  const [total, setTotal] = useState(0);
+  const [avg, setAvg] = useState(0);
+  const [best, setBest] = useState(Infinity);
+
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
+  function formatTime(time) {
+    return `${(time / 1000).toFixed(1)} seconds`;
+  }
+
   function randomize() {
+    const elapsedTime = Date.now() - start;
+    setAvg((avg * total + elapsedTime) / (total + 1));
+    setTotal(total + 1);
+    if (elapsedTime < best) {
+      setBest(elapsedTime);
+    }
+
     setRow1(getRandomInt(0, NUM_ROWS));
     setCol1(getRandomInt(0, NUM_COLS));
     setRow2(getRandomInt(0, NUM_ROWS));
     setCol2(getRandomInt(0, NUM_COLS));
+
+    setStart(Date.now());
   }
 
   return (
@@ -49,6 +67,9 @@ function App() {
       />
       <br />
       <button onClick={randomize}>randomize</button>
+      <div>{`Total: ${total}`}</div>
+      <div>{`Average Time: ${formatTime(avg)}`}</div>
+      <div>{`Best Time: ${formatTime(best)}`}</div>
     </div>
   );
 }
