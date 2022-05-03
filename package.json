@@ -1,5 +1,6 @@
 {
   "name": "set-drill",
+  "homepage": "https://ajpal.github.io/set-drill",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
