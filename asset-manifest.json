@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/set-drill/static/css/main.073c9b0a.css",
-    "main.js": "/set-drill/static/js/main.b076900e.js",
+    "main.js": "/set-drill/static/js/main.7d39317c.js",
     "static/media/allSets.png": "/set-drill/static/media/allSets.ec7cceecdbcdcff07bf8.png",
     "index.html": "/set-drill/index.html",
     "main.073c9b0a.css.map": "/set-drill/static/css/main.073c9b0a.css.map",
-    "main.b076900e.js.map": "/set-drill/static/js/main.b076900e.js.map"
+    "main.7d39317c.js.map": "/set-drill/static/js/main.7d39317c.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.b076900e.js"
+    "static/js/main.7d39317c.js"
   ]
 }
